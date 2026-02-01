@@ -30,7 +30,7 @@ Check [ERROR_CATCH.md](documents/ERROR_CATCH.md) for troubleshooting steps based
 Refer to [DOWNLOAD_DATASET.md](documents/DOWNLOAD_DATASET.md) for instructions on downloading datasets.
 
 
-## 💻 Baseline Preparation
+## 💻 Model Preparation
 
 Refer to [DOWNLOAD_MODEL.md](documents/DOWNLOAD_MODEL.md) for instructions on downloading pre-trained models of baselines.
 
