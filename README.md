@@ -49,18 +49,16 @@ If you have any questions, please create an issue on this repository or contact 
 
 If you find our work useful, please consider citing:
 ```
-@article{bai2025rethinking,
-  title={Rethinking Latent Redundancy in Behavior Cloning: An Information Bottleneck Approach for Robot Manipulation},
-  author={Bai, Shuanghao and Zhou, Wanqi and Ding, Pengxiang and Zhao, Wei and Wang, Donglin and Chen, Badong},
-  journal={arXiv preprint arXiv:2502.02853},
-  year={2025}
+@article{bai2026reshaping,
+  title={Reshaping Action Error Distributions for Reliable Vision-Language-Action Models},
+  author={Bai, Shuanghao and Wang, DaKai and Chi, Cheng and Zhou, Wanqi and Lyu, Jing and Zhao, Xiaoguang and Wang, Pengwei and Wang, Zhongyuan and Xing, Lei and Zhang, Shanghang and Chen, Badong},
+  journal={arXiv preprint arXiv:},
+  year={2026}
 }
+```
 ```
 
 
 ## 🙏 Acknowledgements
 
-For LIBERO experiments, our code is primarily built upon the [LIBERO source code](https://github.com/Lifelong-Robot-Learning/LIBERO). The baseline implementations are mainly adapted from the LIBERO source code, while the environment is set up using [robosuite](https://github.com/ARISE-Initiative/robosuite).
-
-For CortexBench experiments, our code is primarily based on the [eai-vc source code](https://github.com/facebookresearch/eai-vc). The baselines reference [ResNet](https://github.com/KaimingHe/deep-residual-networks), [ViT](https://github.com/google-research/vision_transformer), [R3M](https://github.com/facebookresearch/r3m), [MVP](https://github.com/ir413/mvp), [VC-1](https://github.com/facebookresearch/eai-vc), [Voltron](https://github.com/siddk/voltron-robotics), and [MPI](https://github.com/OpenDriveLab/MPI), while the environment setup is based on [CortexBench](https://github.com/facebookresearch/eai-vc), [dmc2gym](https://github.com/denisyarats/dmc2gym), [MetaWorld](https://github.com/Farama-Foundation/Metaworld), [trifinger_simulation](https://github.com/open-dynamic-robot-initiative/trifinger_simulation), [gym](https://github.com/openai/gym), and [MuJoCo](https://github.com/google-deepmind/mujoco).
-
+For LIBERO experiments, our code is primarily built upon the [BC-IB](https://github.com/BaiShuanghao/BC-IB)
