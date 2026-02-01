@@ -60,4 +60,4 @@ If you find our work useful, please consider citing:
 
 ## 🙏 Acknowledgements
 
-For LIBERO experiments, our code is primarily built upon the [BC-IB](https://github.com/BaiShuanghao/BC-IB)
+For LIBERO experiments, our code is primarily built upon the [BC-IB](https://github.com/BaiShuanghao/BC-IB).
