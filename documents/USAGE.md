@@ -65,7 +65,7 @@ bash libero_exp/scripts/train/noise/main_libero_mee_noise.sh 'libero_spatial' 'b
 If using [eval_libero.sh](../libero_exp/scripts/eval/eval_libero.sh), the command is as follows:
 ```bash
 # for bc_policy
-#                                       diectory of checkpoint            only evalute on final checkpoint
+#                                        diectory of checkpoint            only evalute on final checkpoint
 bash libero_exp/scripts/eval/eval_libero.sh 'outputs/libero/bc_policy/dp/libero_goal/1130_1137_seed0' False
 # for bc_mee_policy
 bash libero_exp/scripts/eval/eval_libero_mee.sh 'outputs/libero/bc_mee_policy/dp/libero_goal/1130_1137_seed0' False
