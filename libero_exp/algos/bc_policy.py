@@ -49,14 +49,12 @@ class BC_Policy(BaseAlgo):
 
         print('Evaluating...')
         for data in tqdm(self.val_loader):
-            bc_loss, mmd, kl_div = self.compute_loss(data, augmentation=False)
+            bc_loss= self.compute_loss(data, augmentation=False)
             loss = bc_loss
 
             ret_dict = {
                 "loss": loss.item(),
                 "bc_loss": bc_loss.item(),
-                "mmd": mmd.item(),
-                "kl_div": kl_div.item(),
             }
 
             for k, v in ret_dict.items():

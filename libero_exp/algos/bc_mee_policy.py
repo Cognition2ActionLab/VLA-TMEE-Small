@@ -80,8 +80,6 @@ class BC_MEE_Policy(BaseAlgo):
                 "loss": loss.item(),
                 "bc_loss": bc_loss.item(),
                 "mee_loss": mee_loss.item(),
-                "mmd": 0.0,
-                "kl_div": 0.0,
             }
 
             for k, v in ret_dict.items():
