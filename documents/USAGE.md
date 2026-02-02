@@ -13,9 +13,8 @@ These configurations can be updated in [libero_exp/configs/base/data/default.yam
 Please refer to [scipts files](libero_exp/scripts) of LIBERO.
 To start an experiment, please choose:
 - `Benchmark` from `['libero_spatial', 'libero_object', 'libero_goal', 'libero_10']`
-- `Policy` from `['bc_policy', 'bc_ib_policy']`
+- `Policy` from `['bc_policy', 'bc_mee_policy']`
 - `Backbone` from `['rnn', 'transformer', 'dp']`
-- `Backbone` from `['mlp', 'rnn', 'transformer', 'vilt', 'dp']`
 - `if you want to modify the noise shapes, please read the libero_exp/data/train_dataset.py for more details.`
 ### Training 
 
