@@ -66,10 +66,10 @@ def space_timesteps(num_timesteps, section_counts):
 
 class SpacedDiffusion(GaussianDiffusion):
     """
-    A diffusion process which can skip steps in a base diffusion process.
+    A diffusion process which can skip steps in a train diffusion process.
     :param use_timesteps: a collection (sequence or set) of timesteps from the
                           original diffusion process to retain.
-    :param kwargs: the kwargs to create the base diffusion process.
+    :param kwargs: the kwargs to create the train diffusion process.
     """
 
     def __init__(self, use_timesteps, **kwargs):

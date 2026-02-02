@@ -42,7 +42,7 @@ obs_key_mapping:
   joint_states: robot0_joint_pos
 
 # language
-# embedding_model_path: "/mnt/dataset/vnwy44/code/BC-IB/libero_exp/weight_model/bert-base-cased"
-embedding_model_path: "/media/code/BC-IB/libero_exp/weight_model/bert-base-cased"
+# embedding_model_path: "/mnt/dataset/vnwy44/code/BC-IB/libero_exp/weight_model/bert-train-cased"
+embedding_model_path: "/media/code/BC-IB/libero_exp/weight_model/bert-train-cased"
 task_embedding_format: "bert"       # language tokenizer
 max_word_len: 25

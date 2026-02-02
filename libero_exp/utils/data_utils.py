@@ -20,8 +20,8 @@ def get_task_embs(cfg, descriptions, embedding_model_path=None):
             tz = AutoTokenizer.from_pretrained(embedding_model_path)
             model = AutoModel.from_pretrained(embedding_model_path)
         else:
-            tz = AutoTokenizer.from_pretrained("bert-base-cased", cache_dir=to_absolute_path("./bert"))
-            model = AutoModel.from_pretrained("bert-base-cased", cache_dir=to_absolute_path("./bert"))
+            tz = AutoTokenizer.from_pretrained("bert-train-cased", cache_dir=to_absolute_path("./bert"))
+            model = AutoModel.from_pretrained("bert-train-cased", cache_dir=to_absolute_path("./bert"))
         tokens = tz(
             text=descriptions,  # the sentence to be encoded
             add_special_tokens=True,  # Add [CLS] and [SEP]
@@ -49,8 +49,8 @@ def get_task_embs(cfg, descriptions, embedding_model_path=None):
         )
         task_embs = model(**tokens)["last_hidden_state"].detach()[:, -1]
     elif cfg.data.task_embedding_format == "clip":
-        tz = AutoTokenizer.from_pretrained("openai/clip-vit-base-patch32")
-        model = AutoModel.from_pretrained("openai/clip-vit-base-patch32")
+        tz = AutoTokenizer.from_pretrained("openai/clip-vit-train-patch32")
+        model = AutoModel.from_pretrained("openai/clip-vit-train-patch32")
         tokens = tz(
             text=descriptions,  # the sentence to be encoded
             add_special_tokens=True,  # Add [CLS] and [SEP]
@@ -61,8 +61,8 @@ def get_task_embs(cfg, descriptions, embedding_model_path=None):
         )
         task_embs = model.get_text_features(**tokens).detach()
     elif cfg.data.task_embedding_format == "roberta":
-        tz = AutoTokenizer.from_pretrained("roberta-base")
-        model = AutoModel.from_pretrained("roberta-base")
+        tz = AutoTokenizer.from_pretrained("roberta-train")
+        model = AutoModel.from_pretrained("roberta-train")
         tz.pad_token = tz.eos_token
         tokens = tz(
             text=descriptions,  # the sentence to be encoded
