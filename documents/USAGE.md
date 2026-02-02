@@ -14,7 +14,12 @@ Please refer to [scipts files](libero_exp/scripts) of LIBERO.
 To start an experiment, please choose:
 - `Benchmark` from `['libero_spatial', 'libero_object', 'libero_goal', 'libero_10']`
 - `Policy` from `['bc_policy', 'bc_ib_policy']`
+<<<<<<< HEAD
 - `Backbone` from `['rnn', 'transformer', 'dp']`
+=======
+- `Backbone` from `['mlp', 'rnn', 'transformer', 'vilt', 'dp']`
+- `if you want to modify the noise shapes, please read the libero_exp/data/train_dataset.py for more details.`
+>>>>>>> 79df8be5637f28dc39c029aecf6fbb9944e0f216
 ### Training 
 
 ```bash
