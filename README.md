@@ -6,7 +6,7 @@
 [Shuanghao Bai*](https://baishuanghao.github.io/), [Dakai Wang*](), [Cheng Chi*](https://chicheng123.github.io/), [Wanqi Zhou](https://ellezwq.github.io/), [Jing Lyu](), [Xiaoguang Zhao](https://people.ucas.ac.cn/~zhaoxiaoguang?language=en), [Pengwei Wang](https://scholar.google.com/citations?hl=zh-CN&user=2xR6P5AAAAAJ), [Zhongyuan Wang](https://www.wangzhongyuan.com/), [Lei Xing](https://scholar.google.com/citations?user=TlfrTOkAAAAJ&hl=en), [Shanghang Zhang](https://pku-hmi-lab.github.io/HMI-Web/leader.html), [Badong Chen](https://gr.xjtu.edu.cn/web/chenbd/home)
 
 
-
+ 
 ## 🔥 Key Features
 
 1. Trajectory-level MEE reshapes action error distributions in VLA models.
