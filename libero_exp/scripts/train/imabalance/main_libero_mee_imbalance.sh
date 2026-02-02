@@ -17,11 +17,10 @@ IMBALANCE=$4
 TRAIN_RATIO1=$5
 TRAIN_RATIO2=$6
 SEED=$7
+MEE_SIGMA=$8
+MEE_WEIGHT=$9
 
-MI=1e-3
-MINE=0.1
-
-#bash libero_exp/scripts/train/imabalance/main_libero_mee_imbalance.sh 'libero_spatial' 'bc_mee_policy' 'transformer' true 0.2 0.8 0
+#bash libero_exp/scripts/train/imabalance/main_libero_mee_imbalance.sh 'libero_spatial' 'bc_mee_policy' 'transformer' true 0.2 0.8 0 0.5 1.0
 
 python train_libero.py \
     --config-path=libero_exp/configs/${POLICY_NAME} \
@@ -31,5 +30,5 @@ python train_libero.py \
     data.train_ratio1=${TRAIN_RATIO1} \
     data.train_ratio2=${TRAIN_RATIO2} \
     train.seed=${SEED} \
-    train.mine_mi_loss_scale=${MINE} \
-    train.mi_loss_scale=${MI}
+    data.sigma=${MEE_SIGMA} \
+    data.mee_weight=${MEE_WEIGHT}

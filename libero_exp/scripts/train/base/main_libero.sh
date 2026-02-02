@@ -13,10 +13,6 @@ POLICY_NAME=$2          # ['bc_policy', 'bc_mee_policy']
 CONFIG_NAME=$3          # backbone_name: ['dp', 'rnn', 'transformer']
 TRAIN_RATIO=$4          
 SEED=$5
-
-MI=1e-3
-MINE=0.1
-
 # bash libero_exp/scripts/train/base/main_libero.sh 'libero_spatial' 'bc_policy' 'transformer' 0.9 0
 
 python train_libero.py \
@@ -24,6 +20,4 @@ python train_libero.py \
     --config-name=${CONFIG_NAME} \
     data.env_name=${ENV_NAME} \
     train.seed=${SEED} \
-    data.train_ratio=${TRAIN_RATIO} \
-    train.mine_mi_loss_scale=${MINE} \
-    train.mi_loss_scale=${MI}
+    data.train_ratio=${TRAIN_RATIO}

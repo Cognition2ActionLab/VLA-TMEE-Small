@@ -18,9 +18,6 @@ TRAIN_RATIO1=$5
 TRAIN_RATIO2=$6
 SEED=$7
 
-MI=1e-3
-MINE=0.1
-
 #bash libero_exp/scripts/train/imabalance/main_libero_imbalance.sh 'libero_spatial' 'bc_mee_policy' 'transformer' true 0.2 0.8 0
 
 python train_libero.py \

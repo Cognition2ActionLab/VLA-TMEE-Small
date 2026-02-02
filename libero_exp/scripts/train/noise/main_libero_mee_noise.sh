@@ -15,11 +15,10 @@ CONFIG_NAME=$3          # backbone_name: ['dp', 'rnn', 'transformer']
 TRAIN_RATIO=$4
 NOISE=$5
 SEED=$6
+MEE_SIGMA=$7
+MEE_WEIGHT=$8
 
-MI=1e-3
-MINE=0.1
-
-#bash libero_exp/scripts/train/noise/main_libero_mee_noise.sh 'libero_spatial' 'bc_mee_policy' 'transformer' 1.0 true 0
+#bash libero_exp/scripts/train/noise/main_libero_mee_noise.sh 'libero_spatial' 'bc_mee_policy' 'transformer' 1.0 true 0  0.5 1.0
 
 python train_libero.py \
     --config-path=libero_exp/configs/${POLICY_NAME} \
@@ -28,5 +27,5 @@ python train_libero.py \
     data.train_ratio=${TRAIN_RATIO} \
     data.noise=${NOISE} \
     train.seed=${SEED} \
-    train.mine_mi_loss_scale=${MINE} \
-    train.mi_loss_scale=${MI}
+    data.sigma=${MEE_SIGMA} \
+    data.mee_weight=${MEE_WEIGHT}
