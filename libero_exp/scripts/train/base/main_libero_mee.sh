@@ -18,7 +18,7 @@ SEED=$5
 MI=1e-3
 MINE=0.1
 
-#bash libero_exp/scripts/main_libero_mee_few_shot.sh 'libero_spatial' 'bc_mee_policy' 'transformer' 0.2 0
+# bash libero_exp/scripts/train/base/main_libero_mee.sh 'libero_spatial' 'bc_mee_policy' 'transformer' 1.0 0
 
 python train_libero.py \
     --config-path=libero_exp/configs/${POLICY_NAME} \

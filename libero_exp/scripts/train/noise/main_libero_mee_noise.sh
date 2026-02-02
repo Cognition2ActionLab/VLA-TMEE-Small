@@ -19,7 +19,7 @@ SEED=$6
 MI=1e-3
 MINE=0.1
 
-#bash libero_exp/scripts/main_libero_mee_noise.sh 'libero_spatial' 'bc_mee_policy' 'transformer' 1.0 true 0
+#bash libero_exp/scripts/train/noise/main_libero_mee_noise.sh 'libero_spatial' 'bc_mee_policy' 'transformer' 1.0 true 0
 
 python train_libero.py \
     --config-path=libero_exp/configs/${POLICY_NAME} \
