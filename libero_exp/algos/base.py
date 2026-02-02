@@ -138,7 +138,6 @@ class BaseAlgo(nn.Module, metaclass=AlgoMeta):
                         cfg.data.train_ratio = cfg.data.train_ratio1
                     else:
                         cfg.data.train_ratio = cfg.data.train_ratio2
-                print(f"Loading task {i}: {benchmark.get_task_names()[i]} with train ratio {cfg.data.train_ratio}...")
                 task_i_train_dataset, shape_meta = get_dataset(
                     cfg=cfg,
                     dataset_path=os.path.join(cfg.data.root_dir, benchmark.get_task_demonstration(i)),

@@ -69,7 +69,6 @@ def rollout(cfg, env_dict, policy, env_num, num_env_rollouts, horizon=None, retu
 
             for step_i in tqdm(range(horizon)):
                 if cfg.data.noise:
-                    print("Adding noise to images...")
                     img_agentview = obs[0]["agentview_image"]
                     img_eye_in_hand = obs[0]["robot0_eye_in_hand_image"]
 
@@ -94,7 +93,6 @@ def rollout(cfg, env_dict, policy, env_num, num_env_rollouts, horizon=None, retu
                         seed=cfg.train.seed,
                         past_image_list=past_img_eye_in_hand_list,
                     )
-
                     obs[0]["agentview_image"] = img_agentview
                     obs[0]["robot0_eye_in_hand_image"] = img_eye_in_hand
 

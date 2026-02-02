@@ -17,8 +17,7 @@ import robomimic.utils.obs_utils as ObsUtils
 import robomimic.utils.log_utils as LogUtils
 import robomimic.utils.tensor_utils as TensorUtils
 from PIL import Image
-base_save_dir = './ori_image'
-transed_save_dir = './transed_image'
+
 def float2uint8(img):
     return np.clip(img, 0, 255).astype(np.uint8)
 class SequenceDataset(torch.utils.data.Dataset):
@@ -576,16 +575,10 @@ class SequenceDataset(torch.utils.data.Dataset):
             obs["pad_mask"] = pad_mask
         target_image_keys = ["agentview_rgb", "eye_in_hand_rgb"]
         if self.cfg.data.noise:
-            # print("Applying image noise augmentation")
             for image_key in target_image_keys:
                 obs_image = obs[image_key]
-                # print(f"Processing observation key: {image_key} with shape {obs_image.shape}")
                 for step_idx in range(obs_image.shape[0]):
                     img_ori = obs_image[step_idx].copy()
-                    # save_subdir = os.path.join(base_save_dir, demo_id, image_key)
-                    # os.makedirs(save_subdir, exist_ok=True)
-                    # save_path = os.path.join(save_subdir, f"step_{step_idx:06d}.png")
-                    # Image.fromarray(float2uint8(img_ori)).save(save_path)
                     img_transfored = apply_image_perturbation(
                         image=img_ori,
                         category=self.cfg.data.category,
@@ -594,11 +587,6 @@ class SequenceDataset(torch.utils.data.Dataset):
                         seed=0,
                         past_image_list=[img_ori],
                     )
-                    # save_transed_subdir = os.path.join(transed_save_dir, demo_id, image_key)
-                    # os.makedirs(save_transed_subdir, exist_ok=True)
-                    # save_transed_path = os.path.join(save_transed_subdir, f"step_{step_idx:06d}.png")
-                    # Image.fromarray(float2uint8(img_transfored)).save(save_transed_path)
-
                     obs[image_key][step_idx] = img_transfored
 
         # prepare image observations from dataset
