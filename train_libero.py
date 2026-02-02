@@ -13,7 +13,6 @@ from omegaconf import DictConfig, OmegaConf
 
 from libero_exp.algos import *
 
-
 @hydra.main(config_path="libero_exp/configs/bc_policy", config_name="vilt", version_base=None)
 def main(cfg: DictConfig):
     work_dir = HydraConfig.get().runtime.output_dir

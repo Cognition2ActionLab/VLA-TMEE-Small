@@ -27,7 +27,6 @@ def main(cfg: DictConfig):
 
     algo = get_algo_class(cfg.algo.algo_type)(cfg, inference=True, device='cpu')  # ['cpu', 'cuda']  
     algo.inference()
-    
 
 if __name__ == "__main__":
     main()
