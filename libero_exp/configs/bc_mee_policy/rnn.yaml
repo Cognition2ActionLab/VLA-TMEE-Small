@@ -12,9 +12,9 @@ experiment_dir: ???
 
 hydra:
   run:
-    dir: ./outputs/libero/${algo.algo_name}/imbalance/rnn/${data.env_name}/ratio${data.train_ratio}/sigma${train.sigma}/mee_weight${train.mee_weight}/${now:%m%d}_${now:%H%M}_seed${train.seed}
+    dir: ./outputs/libero/${algo.algo_name}/rnn/${data.env_name}/ratio${data.train_ratio}/sigma${train.sigma}/mee_weight${train.mee_weight}/${now:%m%d}_${now:%H%M}_seed${train.seed}
   sweep:
-    dir: ./outputs/libero/${algo.algo_name}/imbalance/rnn/${data.env_name}/ratio${data.train_ratio}/sigma${train.sigma}/mee_weight${train.mee_weight}/${now:%m%d}_${now:%H%M}_seed${train.seed}
+    dir: ./outputs/libero/${algo.algo_name}/rnn/${data.env_name}/ratio${data.train_ratio}/sigma${train.sigma}/mee_weight${train.mee_weight}/${now:%m%d}_${now:%H%M}_seed${train.seed}
     subdir: ${hydra.job.num}
 
 wandb:
