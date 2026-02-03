@@ -20,10 +20,10 @@ To start an experiment, please choose:
 
 ```bash
 # for bc_policy
-#                                       benchmark        policy      backbone     train_ratio seed
+#                                benchmark        policy      backbone     train_ratio seed
 bash   libero_exp/scripts/train/base/main_libero.sh 'libero_spatial' 'bc_policy' 'transformer' 1.0 0
 # for bc_mee_policy
-#                                     benchmark        policy      backbone     train_ratio   seed  mee_sigma   mee_weight
+#                      benchmark        policy      backbone     train_ratio   seed  mee_sigma   mee_weight
 bash   libero_exp/scripts/train/base/main_libero_mee.sh  'libero_spatial' 'bc_mee_policy' 'transformer' 1.0 0 0.5 1.0
 ```
 
@@ -34,7 +34,7 @@ bash   libero_exp/scripts/train/base/main_libero_mee.sh  'libero_spatial' 'bc_me
 #                                                   benchmark        policy      backbone     train_ratio   seed 
 bash libero_exp/scripts/train/few_shot/main_libero_few_shot.sh 'libero_spatial' 'bc_policy' 'transformer' 0.2 0
 # for bc_mee_policy
-#                                                   benchmark        policy      backbone     train_ratio   seed  mee_sigma   mee_weight
+#                                      benchmark        policy      backbone     train_ratio   seed  mee_sigma   mee_weight
 bash libero_exp/scripts/train/few_shot/main_libero_mee_few_shot.sh 'libero_spatial' 'bc_mee_policy' 'transformer' 0.2 0 0.5 1.0
 ```
 
@@ -42,10 +42,10 @@ bash libero_exp/scripts/train/few_shot/main_libero_mee_few_shot.sh 'libero_spati
 
 ```bash
 # for bc_policy
-#                                              benchmark        policy      backbone     imbalance_flag    ratio1    ratio2   seed
+#                                 benchmark        policy      backbone     imbalance_flag    ratio1    ratio2   seed
 bash libero_exp/scripts/train/imabalance/main_libero_imbalance.sh 'libero_spatial' 'bc_policy' 'transformer' true 0.2 0.8 0
 # for bc_mee_policy
-#                                              benchmark        policy      backbone     imbalance_flag    ratio1    ratio2   seed  mee_sigma   mee_weight
+#                                 benchmark        policy      backbone     imbalance_flag    ratio1    ratio2   seed  mee_sigma   mee_weight
 bash libero_exp/scripts/train/imabalance/main_libero_mee_imbalance.sh 'libero_spatial' 'bc_mee_policy' 'transformer' true 0.2 0.8 0 0.5 1.0
 ```
 
@@ -56,7 +56,7 @@ bash libero_exp/scripts/train/imabalance/main_libero_mee_imbalance.sh 'libero_sp
 #                                           benchmark        policy      backbone     train_ratio     noise_flag    seed
 bash libero_exp/scripts/train/noise/main_libero_noise.sh 'libero_spatial' 'bc_policy' 'transformer' 1.0 true 0
 # for bc_mee_policy
-#                                           benchmark        policy      backbone     train_ratio     noise_flag   seed   mee_sigma   mee_weight
+#                             benchmark        policy      backbone     train_ratio     noise_flag   seed   mee_sigma   mee_weight
 bash libero_exp/scripts/train/noise/main_libero_mee_noise.sh 'libero_spatial' 'bc_mee_policy' 'transformer' 1.0 true 0 0.5 1.0
 ```
 
